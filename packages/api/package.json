@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api for hq-analityc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix": "./node_modules/.bin/eslint --fix ."
+  },
+  "author": "Cristian David Ippolito",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^8.2.1",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "eslint": "^4.16.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "prettier": "^1.10.2"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}
