@@ -1,16 +1,32 @@
 {
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true,
-        "node": true,
-        "es6": true
-    },
-    "extends": [
-        "google", 
-        "prettier"
-    ],
-    "plugins": [
-        "prettier",
-        "import"
-    ]
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "google",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier",
+    "import"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "after-used"
+    }],
+    "quotes": ["error", "single"],
+    "no-duplicate-imports": "error",
+    "callback-return": "error",
+    "prettier/prettier": "error",
+    "prefer-destructuring": ["error", {
+      "object": true,
+      "array": false
+    }]
+
+  }
 }

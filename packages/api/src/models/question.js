@@ -4,8 +4,8 @@
  * @class Database
  */
 class Question {
-    id;
-    description;
+  id;
+  description;
 }
 
 module.exports = Question;

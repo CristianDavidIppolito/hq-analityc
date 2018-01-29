@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-
+require('dotenv').config();
 /**
  * Class to handle the database operations
  *
@@ -11,12 +11,11 @@ class Database {
    * @memberof Database
    */
   constructor() {
-    require('dotenv').config({path: '../../.env'});
     this.connection = mysql.createConnection({
       host: process.env.HOST,
       user: process.env.DB_USER,
       password: process.env.DB_PW,
-      database: process.env.DB,
+      database: process.env.DB
     });
   }
 
@@ -27,7 +26,7 @@ class Database {
    */
   connect() {
     return new Promise((resolve, reject) => {
-      this.connection.connect((err) => {
+      this.connection.connect(err => {
         if (err) return reject(err);
         resolve();
       });
@@ -59,7 +58,7 @@ class Database {
    */
   close() {
     return new Promise((resolve, reject) => {
-      this.connection.end((err) => {
+      this.connection.end(err => {
         if (err) {
           return reject(err);
         }
